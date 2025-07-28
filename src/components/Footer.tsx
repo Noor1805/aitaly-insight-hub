@@ -1,0 +1,98 @@
+import { Button } from "@/components/ui/button";
+import { Brain, MessageCircle, Mail, Phone, MapPin } from "lucide-react";
+
+const Footer = () => {
+  return (
+    <footer className="bg-primary text-primary-foreground">
+      <div className="container mx-auto px-4 py-16">
+        <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-8">
+          {/* Brand */}
+          <div className="lg:col-span-2">
+            <div className="flex items-center gap-3 mb-6">
+              <div className="w-10 h-10 bg-white/10 rounded-full flex items-center justify-center">
+                <Brain className="w-6 h-6" />
+              </div>
+              <span className="text-2xl font-bold">Ai Tally</span>
+            </div>
+            
+            <p className="text-primary-foreground/80 mb-6 max-w-md leading-relaxed">
+              The AI-powered business brain that transforms your Tally data into actionable insights. 
+              Smart, simple, and designed for Indian businesses.
+            </p>
+            
+            <div className="flex flex-col sm:flex-row gap-4">
+              <Button variant="secondary" size="lg">
+                <MessageCircle className="w-5 h-5" />
+                Get WhatsApp Demo
+              </Button>
+            </div>
+          </div>
+          
+          {/* Quick Links */}
+          <div>
+            <h3 className="font-semibold mb-4">Quick Links</h3>
+            <ul className="space-y-3">
+              {[
+                "How It Works",
+                "Features", 
+                "Pricing",
+                "Testimonials",
+                "FAQ",
+                "Contact"
+              ].map((link) => (
+                <li key={link}>
+                  <a href={`#${link.toLowerCase().replace(' ', '-')}`} 
+                     className="text-primary-foreground/80 hover:text-white transition-colors">
+                    {link}
+                  </a>
+                </li>
+              ))}
+            </ul>
+          </div>
+          
+          {/* Contact Info */}
+          <div>
+            <h3 className="font-semibold mb-4">Contact Us</h3>
+            <div className="space-y-3">
+              <div className="flex items-center gap-3">
+                <Phone className="w-4 h-4 text-primary-foreground/60" />
+                <span className="text-primary-foreground/80">+91 9841057742</span>
+              </div>
+              
+              <div className="flex items-center gap-3">
+                <Mail className="w-4 h-4 text-primary-foreground/60" />
+                <span className="text-primary-foreground/80">support@aitally.com</span>
+              </div>
+              
+              <div className="flex items-start gap-3">
+                <MapPin className="w-4 h-4 text-primary-foreground/60 mt-1" />
+                <span className="text-primary-foreground/80 text-sm">
+                  Ceebros Building, 11/32 A3<br />
+                  Cenotaph Road, Chennai
+                </span>
+              </div>
+            </div>
+          </div>
+        </div>
+        
+        {/* Bottom Bar */}
+        <div className="border-t border-white/10 mt-12 pt-8 flex flex-col md:flex-row justify-between items-center gap-4">
+          <p className="text-primary-foreground/60 text-sm">
+            © 2024 Ai Tally. All rights reserved. Made with ❤️ for Indian businesses.
+          </p>
+          
+          <div className="flex gap-6 text-sm">
+            <a href="#privacy" className="text-primary-foreground/60 hover:text-white transition-colors">
+              Privacy Policy
+            </a>
+            <a href="#terms" className="text-primary-foreground/60 hover:text-white transition-colors">
+              Terms of Service
+            </a>
+          </div>
+        </div>
+      </div>
+    </footer>
+  );
+};
+
+export default Footer;
