@@ -9,14 +9,14 @@ const buttonVariants = cva(
   {
     variants: {
       variant: {
-        default: "bg-primary text-primary-foreground hover:bg-primary-light shadow-brand hover:shadow-lg transition-spring",
-        destructive: "bg-destructive text-destructive-foreground hover:bg-destructive/90",
-        outline: "border border-primary text-primary bg-background hover:bg-primary hover:text-primary-foreground",
-        secondary: "bg-secondary text-secondary-foreground hover:bg-secondary/80",
-        ghost: "hover:bg-accent hover:text-accent-foreground",
-        link: "text-primary underline-offset-4 hover:underline",
-        hero: "gradient-primary text-white hover:shadow-brand hover:scale-105 transition-spring font-semibold",
-        success: "bg-success text-success-foreground hover:bg-success/90 shadow-md",
+        default: "bg-primary text-primary-foreground hover:bg-primary-light shadow-brand hover:shadow-lg transition-spring dark:bg-primary dark:text-primary-foreground dark:hover:bg-primary-light",
+        destructive: "bg-destructive text-destructive-foreground hover:bg-destructive/90 dark:bg-destructive dark:text-destructive-foreground",
+        outline: "border border-primary text-primary bg-background hover:bg-primary hover:text-primary-foreground dark:border-primary dark:text-primary dark:bg-background dark:hover:bg-primary dark:hover:text-primary-foreground",
+        secondary: "bg-secondary text-secondary-foreground hover:bg-secondary/80 dark:bg-secondary dark:text-secondary-foreground dark:hover:bg-secondary/80",
+        ghost: "hover:bg-accent hover:text-accent-foreground dark:hover:bg-accent dark:hover:text-accent-foreground",
+        link: "text-primary underline-offset-4 hover:underline dark:text-primary",
+        hero: "gradient-primary text-white hover:shadow-brand hover:scale-105 transition-spring font-semibold dark:gradient-primary dark:text-primary-foreground",
+        success: "bg-success text-success-foreground hover:bg-success/90 shadow-md dark:bg-success dark:text-success-foreground dark:hover:bg-success/90",
       },
       size: {
         default: "h-11 px-6 py-3",
