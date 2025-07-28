@@ -67,7 +67,7 @@ const Pricing = () => {
     <section className="py-20 bg-background">
       <div className="container mx-auto px-4">
         <div className="text-center mb-16">
-          <h2 className="text-3xl md:text-5xl font-bold text-foreground mb-6 animate-fade-in">
+          <h2 className="text-3xl font-orbitron md:text-5xl font-bold text-foreground mb-6 animate-fade-in">
             Simple, Transparent Pricing
           </h2>
           <p className="text-xl text-muted-foreground max-w-3xl mx-auto animate-fade-in">
@@ -93,7 +93,7 @@ const Pricing = () => {
                 <div className="w-16 h-16 bg-primary/10 rounded-full flex items-center justify-center mx-auto mb-4">
                   <plan.icon className="w-8 h-8 text-primary" />
                 </div>
-                <CardTitle className="text-2xl font-bold">{plan.name}</CardTitle>
+                <CardTitle className="text-2xl font-orbitron font-bold">{plan.name}</CardTitle>
                 <CardDescription className="text-muted-foreground">
                   {plan.description}
                 </CardDescription>

@@ -73,7 +73,7 @@ const Features = () => {
     <section className="py-20 bg-secondary/30">
       <div className="container mx-auto px-4">
         <div className="text-center mb-16">
-          <h2 className="text-3xl md:text-5xl font-bold text-foreground mb-6 animate-fade-in">
+          <h2 className="text-3xl md:text-5xl font-orbitron font-bold text-foreground mb-6 animate-fade-in">
             Everything Your Business Brain Needs
           </h2>
           <p className="text-xl text-muted-foreground max-w-3xl mx-auto animate-fade-in">
@@ -91,7 +91,7 @@ const Features = () => {
                     <feature.icon className={`w-6 h-6 ${feature.color}`} />
                   </div>
                 </div>
-                <CardTitle className="text-xl font-semibold">{feature.title}</CardTitle>
+                <CardTitle className="text-xl font-orbitron font-semibold">{feature.title}</CardTitle>
               </CardHeader>
               <CardContent>
                 <CardDescription className="text-muted-foreground leading-relaxed">

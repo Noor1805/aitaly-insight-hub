@@ -12,7 +12,7 @@ const Footer = () => {
               <div className="w-10 h-10 bg-white/10 rounded-full flex items-center justify-center">
                 <Brain className="w-6 h-6" />
               </div>
-              <span className="text-2xl font-bold">Ai Tally</span>
+              <span className="text-2xl font-orbitron font-bold">Ai Tally</span>
             </div>
             
             <p className="text-primary-foreground/80 mb-6 max-w-md leading-relaxed">
@@ -30,8 +30,8 @@ const Footer = () => {
           
           {/* Quick Links */}
           <div>
-            <h3 className="font-semibold mb-4">Quick Links</h3>
-            <ul className="space-y-3">
+            <h3 className="font-semibold font-orbitron mb-4">Quick Links</h3>
+            <ul className="space-y-3 ">
               {[
                 "How It Works",
                 "Features", 
@@ -52,7 +52,7 @@ const Footer = () => {
           
           {/* Contact Info */}
           <div>
-            <h3 className="font-semibold mb-4">Contact Us</h3>
+            <h3 className="font-semibold font-orbitron mb-4">Contact Us</h3>
             <div className="space-y-3">
               <div className="flex items-center gap-3">
                 <Phone className="w-4 h-4 text-primary-foreground/60" />

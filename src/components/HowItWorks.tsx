@@ -28,7 +28,7 @@ const HowItWorks = () => {
     <section className="py-20 bg-background">
       <div className="container mx-auto px-4">
         <div className="text-center mb-16">
-          <h2 className="text-3xl md:text-5xl font-bold text-foreground mb-6 animate-fade-in">
+          <h2 className="text-3xl font-orbitron md:text-5xl font-bold text-foreground mb-6 animate-fade-in">
             How Ai Tally Works
           </h2>
           <p className="text-xl text-muted-foreground max-w-2xl mx-auto animate-fade-in">
@@ -49,7 +49,7 @@ const HowItWorks = () => {
                     <div className="absolute -top-4 -right-4 w-8 h-8 bg-primary text-primary-foreground rounded-full flex items-center justify-center font-bold text-sm">
                       {index + 1}
                     </div>
-                    <h3 className="text-xl font-semibold mb-4">{step.title}</h3>
+                    <h3 className="text-xl font-orbitron font-semibold mb-4">{step.title}</h3>
                     <p className="text-muted-foreground leading-relaxed">{step.description}</p>
                   </CardContent>
                 </Card>
@@ -66,7 +66,7 @@ const HowItWorks = () => {
           
           {/* Benefits showcase */}
           <div className="bg-gradient-to-r from-primary/5 to-accent/5 rounded-2xl p-8 md:p-12 text-center">
-            <h3 className="text-2xl md:text-3xl font-bold text-foreground mb-6">
+            <h3 className="text-2xl font-orbitron md:text-3xl font-bold text-foreground mb-6">
               Why Business Owners Love Ai Tally
             </h3>
             

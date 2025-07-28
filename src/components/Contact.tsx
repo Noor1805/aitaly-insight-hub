@@ -7,7 +7,7 @@ const Contact = () => {
     <section className="py-20 bg-background">
       <div className="container mx-auto px-4">
         <div className="text-center mb-16">
-          <h2 className="text-3xl md:text-5xl font-bold text-foreground mb-6 animate-fade-in">
+          <h2 className="text-3xl font-orbitron md:text-5xl font-bold text-foreground mb-6 animate-fade-in">
             Ready to Transform Your Business?
           </h2>
           <p className="text-xl text-muted-foreground max-w-3xl mx-auto animate-fade-in">
@@ -21,7 +21,7 @@ const Contact = () => {
           <div className="animate-fade-in">
             <Card className="border-border gradient-card h-full">
               <CardContent className="p-8">
-                <h3 className="text-2xl font-bold text-foreground mb-6">
+                <h3 className="text-2xl font-orbitron font-bold text-foreground mb-6">
                   Start Your Free Trial Today
                 </h3>
                 
@@ -71,7 +71,7 @@ const Contact = () => {
           <div className="animate-fade-in">
             <Card className="border-border h-full">
               <CardContent className="p-8">
-                <h3 className="text-2xl font-bold text-foreground mb-6">
+                <h3 className="text-2xl font-orbitron font-bold text-foreground mb-6">
                   Get in Touch
                 </h3>
                 

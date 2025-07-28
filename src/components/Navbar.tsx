@@ -47,7 +47,7 @@ const Navbar = () => {
           : 'bg-transparent'
       }`}
     >
-      <div className="container mx-auto px-6 lg:px-8">
+      <div className="container mx-auto font-orbitron px-6 lg:px-8">
         <div className="flex items-center justify-between h-16 lg:h-20">
           {/* Logo */}
           <motion.div 
@@ -58,7 +58,7 @@ const Navbar = () => {
           >
             <a
               href="#"
-              className="text-2xl lg:text-3xl font-bold text-primary hover:text-primary-light transition-colors"
+              className="text-2xl font-orbitron lg:text-3xl font-bold text-primary hover:text-primary-light transition-colors"
             >
               AiTally
             </a>

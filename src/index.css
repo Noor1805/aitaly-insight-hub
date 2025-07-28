@@ -2,9 +2,12 @@
 @tailwind components;
 @tailwind utilities;
 
-/* Ai Tally Design System - Dark Green + White Theme
-All colors MUST be HSL.
-*/
+@font-face {
+  font-family: 'OrbitronBold';
+  src: url('./assets/OrbitronBold.ttf') format('truetype');
+  font-weight: bold;
+  font-style: normal;
+}
 
 @layer base {
   :root {
