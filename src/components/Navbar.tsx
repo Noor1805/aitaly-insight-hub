@@ -56,12 +56,7 @@ const Navbar = () => {
             transition={{ duration: 0.5, delay: 0.1 }}
             className="flex-shrink-0"
           >
-            <a
-              href="#"
-              className="text-2xl font-orbitron lg:text-3xl font-bold text-primary hover:text-primary-light transition-colors"
-            >
-              AiTally
-            </a>
+            <img className='w-15 h-10' src="/assets/logo.svg" alt="" />
           </motion.div>
 
           {/* Desktop Navigation */}
