@@ -2,6 +2,7 @@ import { Card, CardContent, CardDescription, CardHeader, CardTitle } from "@/com
 import { Button } from "@/components/ui/button";
 import { Badge } from "@/components/ui/badge";
 import { Check, MessageCircle, Crown, Building2 } from "lucide-react";
+import SplitText from './SplitText';
 
 const Pricing = () => {
   const plans = [
@@ -67,9 +68,19 @@ const Pricing = () => {
     <section className="py-20 bg-background">
       <div className="container mx-auto px-4">
         <div className="text-center mb-16">
-          <h2 className="text-3xl font-orbitron md:text-5xl font-bold text-foreground mb-6 animate-fade-in">
-            Simple, Transparent Pricing
-          </h2>
+          <SplitText
+            text="Simple, Transparent Pricing"
+            className="text-2xl text-center font-orbitron md:text-5xl"
+            delay={100}
+            duration={0.2}
+            ease="power3.out"
+            splitType="chars"
+            from={{ opacity: 0, y: 40 }}
+            to={{ opacity: 1, y: 0 }}
+            threshold={0.1}
+            rootMargin="-100px"
+            textAlign="center"
+          />
           <p className="text-xl text-muted-foreground max-w-3xl mx-auto animate-fade-in">
             Choose the perfect plan for your business. Start with a 14-day free trial, no credit card required.
           </p>
@@ -115,7 +126,7 @@ const Pricing = () => {
                 
                 <Button 
                   variant={plan.popular ? "hero" : "outline"} 
-                  className="w-full"
+                  className="w-full cursor-target"
                   size="lg"
                 >
                   {plan.cta}

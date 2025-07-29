@@ -9,6 +9,12 @@
   font-style: normal;
 }
 
+
+*::selection{
+      background-color: rgb(34, 88, 34);
+      color: #fff;
+}
+
 @layer base {
   :root {
     /* Core Brand Colors - Dark Green Palette */

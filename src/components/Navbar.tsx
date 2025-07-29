@@ -96,7 +96,7 @@ const Navbar = () => {
               variant="ghost"
               size="icon"
               onClick={() => setTheme(theme === 'dark' ? 'light' : 'dark')}
-              className="hover:bg-accent"
+              className="hover:bg-accent cursor-target"
             >
               <Sun className="h-5 w-5 rotate-0 scale-100 transition-all dark:-rotate-90 dark:scale-0" />
               <Moon className="absolute h-5 w-5 rotate-90 scale-0 transition-all dark:rotate-0 dark:scale-100" />
@@ -107,7 +107,7 @@ const Navbar = () => {
               variant="hero"
               size="lg"
               onClick={() => scrollToSection('#contact')}
-              className="shadow-brand hover:shadow-lg"
+              className="shadow-brand hover:shadow-lg cursor-target"
             >
               Get Demo
             </Button>
@@ -124,7 +124,7 @@ const Navbar = () => {
               variant="ghost"
               size="icon"
               onClick={() => setTheme(theme === 'dark' ? 'light' : 'dark')}
-              className="hover:bg-accent"
+              className="hover:bg-accent cursor-target"
             >
               <Sun className="h-5 w-5 rotate-0 scale-100 transition-all dark:-rotate-90 dark:scale-0" />
               <Moon className="absolute h-5 w-5 rotate-90 scale-0 transition-all dark:rotate-0 dark:scale-100" />

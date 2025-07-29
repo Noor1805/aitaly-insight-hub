@@ -4,6 +4,7 @@ import {
   AccordionItem,
   AccordionTrigger,
 } from "@/components/ui/accordion";
+import SplitText from './SplitText';
 
 const FAQ = () => {
   const faqs = [
@@ -53,9 +54,19 @@ const FAQ = () => {
     <section className="py-20 bg-secondary/30">
       <div className="container mx-auto px-4">
         <div className="text-center mb-16">
-          <h2 className="text-3xl font-orbitron md:text-5xl font-bold text-foreground mb-6 animate-fade-in">
-            Frequently Asked Questions
-          </h2>
+          <SplitText
+            text="Frequently Asked Questions"
+            className="text-2xl text-center font-orbitron md:text-5xl"
+            delay={100}
+            duration={0.2}
+            ease="power3.out"
+            splitType="chars"
+            from={{ opacity: 0, y: 40 }}
+            to={{ opacity: 1, y: 0 }}
+            threshold={0.1}
+            rootMargin="-100px"
+            textAlign="center"
+          />
           <p className="text-xl text-muted-foreground max-w-3xl mx-auto animate-fade-in">
             Got questions? We've got answers. If you don't find what you're looking for, 
             feel free to WhatsApp us directly.
