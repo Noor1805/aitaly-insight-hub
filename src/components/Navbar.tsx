@@ -1,8 +1,8 @@
-import React, { useState, useEffect } from 'react';
-import { motion, AnimatePresence } from 'framer-motion';
-import { Menu, X, Sun, Moon } from 'lucide-react';
-import { Button } from '@/components/ui/button';
-import { useTheme } from 'next-themes';
+import React, { useState, useEffect } from "react";
+import { motion, AnimatePresence } from "framer-motion";
+import { Menu, X, Sun, Moon } from "lucide-react";
+import { Button } from "@/components/ui/button";
+import { useTheme } from "next-themes";
 
 const Navbar = () => {
   const [isOpen, setIsOpen] = useState(false);
@@ -16,22 +16,22 @@ const Navbar = () => {
       setScrolled(isScrolled);
     };
 
-    window.addEventListener('scroll', handleScroll);
-    return () => window.removeEventListener('scroll', handleScroll);
+    window.addEventListener("scroll", handleScroll);
+    return () => window.removeEventListener("scroll", handleScroll);
   }, []);
 
   const navItems = [
-    { name: 'Features', href: '#features' },
-    { name: 'How it Works', href: '#how-it-works' },
-    { name: 'Testimonials', href: '#testimonials' },
-    { name: 'Pricing', href: '#pricing' },
-    { name: 'Contact', href: '#contact' },
+    { name: "Features", href: "#features" },
+    { name: "How it Works", href: "#how-it-works" },
+    { name: "Testimonials", href: "#testimonials" },
+    { name: "Pricing", href: "#pricing" },
+    { name: "Contact", href: "#contact" },
   ];
 
   const scrollToSection = (href: string) => {
     const element = document.querySelector(href);
     if (element) {
-      element.scrollIntoView({ behavior: 'smooth' });
+      element.scrollIntoView({ behavior: "smooth" });
     }
     setIsOpen(false);
   };
@@ -43,20 +43,24 @@ const Navbar = () => {
       transition={{ duration: 0.6, ease: "easeOut" }}
       className={`fixed top-0 left-0 right-0 z-50 transition-all duration-300 ${
         scrolled
-          ? 'bg-background/95 backdrop-blur-md shadow-brand border-b border-border'
-          : 'bg-transparent'
+          ? "bg-background/95 backdrop-blur-md shadow-brand border-b border-border"
+          : "bg-transparent"
       }`}
     >
       <div className="container mx-auto font-orbitron px-6 lg:px-8">
         <div className="flex items-center justify-between h-16 lg:h-20">
           {/* Logo */}
-          <motion.div 
+          <motion.div
             initial={{ y: -20, opacity: 0 }}
             animate={{ y: 0, opacity: 1 }}
             transition={{ duration: 0.5, delay: 0.1 }}
             className="flex-shrink-0"
           >
-            <img className='w-15 h-10' src="/assets/logo.svg" alt="" />
+            <img
+              src="/assets/logo.svg"
+              alt="Logo"
+              className="w-28 h-auto md:w-36 lg:w-44"
+            />
           </motion.div>
 
           {/* Desktop Navigation */}
@@ -81,7 +85,7 @@ const Navbar = () => {
           </div>
 
           {/* Desktop CTA and Theme Toggle */}
-          <motion.div 
+          <motion.div
             initial={{ y: -20, opacity: 0 }}
             animate={{ y: 0, opacity: 1 }}
             transition={{ duration: 0.5, delay: 0.7 }}
@@ -90,18 +94,18 @@ const Navbar = () => {
             <Button
               variant="ghost"
               size="icon"
-              onClick={() => setTheme(theme === 'dark' ? 'light' : 'dark')}
+              onClick={() => setTheme(theme === "dark" ? "light" : "dark")}
               className="hover:bg-accent cursor-target"
             >
               <Sun className="h-5 w-5 rotate-0 scale-100 transition-all dark:-rotate-90 dark:scale-0" />
               <Moon className="absolute h-5 w-5 rotate-90 scale-0 transition-all dark:rotate-0 dark:scale-100" />
               <span className="sr-only">Toggle theme</span>
             </Button>
-            
+
             <Button
               variant="hero"
               size="lg"
-              onClick={() => scrollToSection('#contact')}
+              onClick={() => scrollToSection("#contact")}
               className="shadow-brand hover:shadow-lg cursor-target"
             >
               Get Demo
@@ -109,7 +113,7 @@ const Navbar = () => {
           </motion.div>
 
           {/* Mobile menu button and theme toggle */}
-          <motion.div 
+          <motion.div
             initial={{ y: -20, opacity: 0 }}
             animate={{ y: 0, opacity: 1 }}
             transition={{ duration: 0.5, delay: 0.7 }}
@@ -118,14 +122,14 @@ const Navbar = () => {
             <Button
               variant="ghost"
               size="icon"
-              onClick={() => setTheme(theme === 'dark' ? 'light' : 'dark')}
+              onClick={() => setTheme(theme === "dark" ? "light" : "dark")}
               className="hover:bg-accent cursor-target"
             >
               <Sun className="h-5 w-5 rotate-0 scale-100 transition-all dark:-rotate-90 dark:scale-0" />
               <Moon className="absolute h-5 w-5 rotate-90 scale-0 transition-all dark:rotate-0 dark:scale-100" />
               <span className="sr-only">Toggle theme</span>
             </Button>
-            
+
             <Button
               variant="ghost"
               size="icon"
@@ -186,8 +190,8 @@ const Navbar = () => {
                     {item.name}
                   </motion.a>
                 ))}
-                
-                <motion.div 
+
+                <motion.div
                   initial={{ x: -20, opacity: 0 }}
                   animate={{ x: 0, opacity: 1 }}
                   transition={{ duration: 0.3, delay: navItems.length * 0.1 }}
@@ -196,7 +200,7 @@ const Navbar = () => {
                   <Button
                     variant="hero"
                     size="lg"
-                    onClick={() => scrollToSection('#contact')}
+                    onClick={() => scrollToSection("#contact")}
                     className="w-full shadow-brand"
                   >
                     Get Demo
