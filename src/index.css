@@ -249,3 +249,24 @@
   0%, 100% { transform: scale(1); }
   50% { transform: scale(1.02); }
 }
+
+.card-spotlight {
+  position: relative;
+  border-radius: 1rem;
+  overflow: hidden;
+}
+
+.card-spotlight::before {
+  content: "";
+  position: absolute;
+  inset: 0;
+  pointer-events: none;
+  background: radial-gradient(
+    600px circle at var(--mouse-x, 50%) var(--mouse-y, 50%),
+    rgba(255, 255, 0, 0.25),
+    transparent 40%
+  );
+  transition: opacity 0.3s ease;
+  z-index: 10;
+}
+
