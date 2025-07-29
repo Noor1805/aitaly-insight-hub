@@ -10,7 +10,7 @@ const Hero = () => {
   <div className="absolute inset-0 z-0">
     <RippleGrid
       enableRainbow={false}
-      gridColor="#00ff88"
+      gridColor="#EAB308"
       rippleIntensity={0.05}
       gridSize={15}
       gridThickness={10}
