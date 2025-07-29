@@ -4,7 +4,7 @@ import { Brain, MessageCircle, Mail, Phone, MapPin } from "lucide-react";
 const Footer = () => {
   return (
     <footer className="bg-primary text-primary-foreground">
-      <div className="container mx-auto px-4 py-16">
+      <div className="container mx-auto px-4 pt-16 pb-8">
         <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-8">
           {/* Brand */}
           <div className="lg:col-span-2">
@@ -21,7 +21,7 @@ const Footer = () => {
             </p>
             
             <div className="flex flex-col sm:flex-row gap-4">
-              <Button variant="secondary" size="lg">
+              <Button variant="secondary" size="lg" className="cursor-target">
                 <MessageCircle className="w-5 h-5" />
                 Get WhatsApp Demo
               </Button>
@@ -42,7 +42,7 @@ const Footer = () => {
               ].map((link) => (
                 <li key={link}>
                   <a href={`#${link.toLowerCase().replace(' ', '-')}`} 
-                     className="text-primary-foreground/80 hover:text-white transition-colors">
+                     className="text-primary-foreground/80 hover:text-black transition-colors">
                     {link}
                   </a>
                 </li>
@@ -78,14 +78,14 @@ const Footer = () => {
         {/* Bottom Bar */}
         <div className="border-t border-white/10 mt-12 pt-8 flex flex-col md:flex-row justify-between items-center gap-4">
           <p className="text-primary-foreground/60 text-sm">
-            © 2024 Ai Tally. All rights reserved. Made with ❤️ for Indian businesses.
+            © 2024 Ai Tally. All rights reserved. Made with <span className="animate-pulse">❤️ </span>for Indian businesses.
           </p>
           
           <div className="flex gap-6 text-sm">
-            <a href="#privacy" className="text-primary-foreground/60 hover:text-white transition-colors">
+            <a href="#privacy" className="text-primary-foreground/60 hover:text-black transition-colors">
               Privacy Policy
             </a>
-            <a href="#terms" className="text-primary-foreground/60 hover:text-white transition-colors">
+            <a href="#terms" className="text-primary-foreground/60 hover:text-black transition-colors">
               Terms of Service
             </a>
           </div>

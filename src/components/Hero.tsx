@@ -12,11 +12,11 @@ const Hero = () => {
       enableRainbow={false}
       gridColor="#00ff88"
       rippleIntensity={0.05}
-      gridSize={10}
-      gridThickness={15}
+      gridSize={15}
+      gridThickness={10}
       opacity={0.4}
       mouseInteraction={true}
-      mouseInteractionRadius={1.2}
+      mouseInteractionRadius={0.8}
     />
   </div>
 
@@ -49,11 +49,11 @@ const Hero = () => {
 
       {/* CTA Buttons */}
       <div className="flex flex-col sm:flex-row gap-4 justify-center items-center mb-16 animate-fade-in">
-        <Button variant="hero" size="xl" className="w-full sm:w-auto">
+        <Button variant="hero" size="xl" className="w-full sm:w-auto cursor-target">
           <MessageCircle className="w-5 h-5" />
           Get WhatsApp Demo
         </Button>
-        <Button variant="outline" size="xl" className="w-full sm:w-auto">
+        <Button variant="outline" size="xl" className="w-full sm:w-auto cursor-target">
           <BarChart3 className="w-5 h-5" />
           View Live Dashboard
         </Button>

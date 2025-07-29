@@ -1,5 +1,7 @@
 import { Card, CardContent } from "@/components/ui/card";
 import { Star, Quote } from "lucide-react";
+import SplitText from "./SplitText";
+import CountUp from "./CountUp";
 
 const Testimonials = () => {
   const testimonials = [
@@ -7,112 +9,156 @@ const Testimonials = () => {
       name: "Mohit Sharma",
       role: "FMCG Business Owner",
       location: "Mumbai",
-      content: "Earlier I used to spend hours trying to understand Tally reports. Now Ai Tally sends me daily WhatsApp messages in simple Hindi-English that I can actually understand. My CA is also impressed!",
+      content:
+        "Earlier I used to spend hours trying to understand Tally reports. Now Ai Tally sends me daily WhatsApp messages in simple Hindi-English that I can actually understand. My CA is also impressed!",
       rating: 5,
-      avatar: "MS"
+      avatar: "MS",
     },
     {
       name: "Meena Patel",
       role: "Retail Store Owner",
-      location: "Ahmedabad", 
-      content: "Ai Tally saved me from a ₹50,000 GST penalty by alerting me 3 days before the deadline. It's like having a smart accountant working 24/7 for my business.",
+      location: "Ahmedabad",
+      content:
+        "Ai Tally saved me from a ₹50,000 GST penalty by alerting me 3 days before the deadline. It's like having a smart accountant working 24/7 for my business.",
       rating: 5,
-      avatar: "MP"
+      avatar: "MP",
     },
     {
       name: "Vijay Gupta",
       role: "Pharmaceutical Distributor",
       location: "Delhi",
-      content: "The profit suggestions are amazing! Ai Tally identified slow-moving stock and suggested discount strategies that increased my monthly profit by 15%.",
+      content:
+        "The profit suggestions are amazing! Ai Tally identified slow-moving stock and suggested discount strategies that increased my monthly profit by 15%.",
       rating: 5,
-      avatar: "VG"
+      avatar: "VG",
     },
     {
       name: "Rashni Jain",
       role: "Textile Manufacturer",
       location: "Surat",
-      content: "My staff can now access basic reports through their phones without touching the main Tally system. It has improved our efficiency tremendously.",
+      content:
+        "My staff can now access basic reports through their phones without touching the main Tally system. It has improved our efficiency tremendously.",
       rating: 5,
-      avatar: "RJ"
+      avatar: "RJ",
     },
     {
-      name: "Arjun Singh", 
+      name: "Arjun Singh",
       role: "Electronics Retailer",
       location: "Bangalore",
-      content: "Best investment for my business! The daily reports help me make quick decisions. I can see profit margins, pending payments, and stock levels at a glance.",
+      content:
+        "Best investment for my business! The daily reports help me make quick decisions. I can see profit margins, pending payments, and stock levels at a glance.",
       rating: 5,
-      avatar: "AS"
+      avatar: "AS",
     },
     {
       name: "Priya Agarwal",
-      role: "Beauty Products Distributor", 
+      role: "Beauty Products Distributor",
       location: "Pune",
-      content: "Ai Tally speaks my language! No more technical jargon. It explains everything in simple terms and even gives suggestions to improve my business.",
+      content:
+        "Ai Tally speaks my language! No more technical jargon. It explains everything in simple terms and even gives suggestions to improve my business.",
       rating: 5,
-      avatar: "PA"
-    }
+      avatar: "PA",
+    },
   ];
 
   return (
     <section className="py-20 bg-secondary/20">
       <div className="container mx-auto px-4">
         <div className="text-center mb-16">
-          <h2 className="text-3xl md:text-5xl font-orbitron font-bold text-foreground mb-6 animate-fade-in">
-            Real Stories from Real Business Owners
-          </h2>
+          <SplitText
+            text="Real Stories from Real Business Owners"
+            className="text-2xl text-center font-orbitron md:text-5xl"
+            delay={100}
+            duration={0.2}
+            ease="power3.out"
+            splitType="chars"
+            from={{ opacity: 0, y: 40 }}
+            to={{ opacity: 1, y: 0 }}
+            threshold={0.1}
+            rootMargin="-100px"
+            textAlign="center"
+          />
           <p className="text-xl text-muted-foreground max-w-3xl mx-auto animate-fade-in">
-            Join thousands of business owners who've transformed their operations with Ai Tally
+            Join thousands of business owners who've transformed their
+            operations with Ai Tally
           </p>
         </div>
-        
+
         <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8 animate-stagger">
           {testimonials.map((testimonial, index) => (
-            <Card key={index} className="border-border hover-lift transition-spring relative overflow-hidden">
+            <Card
+              key={index}
+              className="border-border hover-lift transition-spring relative overflow-hidden"
+            >
               {/* Quote decoration */}
               <div className="absolute top-4 right-4 opacity-10">
                 <Quote className="w-12 h-12 text-primary" />
               </div>
-              
+
               <CardContent className="p-6">
                 {/* Rating */}
                 <div className="flex gap-1 mb-4">
                   {[...Array(testimonial.rating)].map((_, i) => (
-                    <Star key={i} className="w-4 h-4 fill-yellow-400 text-yellow-400" />
+                    <Star
+                      key={i}
+                      className="w-4 h-4 fill-yellow-400 text-yellow-400"
+                    />
                   ))}
                 </div>
-                
+
                 {/* Content */}
                 <p className="text-muted-foreground mb-6 leading-relaxed italic">
                   "{testimonial.content}"
                 </p>
-                
+
                 {/* Author */}
                 <div className="flex items-center gap-4">
                   <div className="w-12 h-12 bg-primary/10 rounded-full flex items-center justify-center">
-                    <span className="text-primary font-semibold text-sm">{testimonial.avatar}</span>
+                    <span className="text-primary font-semibold text-sm">
+                      {testimonial.avatar}
+                    </span>
                   </div>
                   <div>
-                    <h4 className="font-semibold text-foreground">{testimonial.name}</h4>
-                    <p className="text-sm text-muted-foreground">{testimonial.role}</p>
-                    <p className="text-xs text-primary">{testimonial.location}</p>
+                    <h4 className="font-semibold text-foreground">
+                      {testimonial.name}
+                    </h4>
+                    <p className="text-sm text-muted-foreground">
+                      {testimonial.role}
+                    </p>
+                    <p className="text-xs text-primary">
+                      {testimonial.location}
+                    </p>
                   </div>
                 </div>
               </CardContent>
             </Card>
           ))}
         </div>
-        
+
         {/* Stats section */}
         <div className="mt-20 grid grid-cols-2 md:grid-cols-4 gap-8 text-center">
           {[
-            { number: "10,000+", label: "Business Owners" },
-            { number: "₹50 Cr+", label: "Revenue Tracked" },
-            { number: "99.9%", label: "Uptime" },
-            { number: "24/7", label: "AI Monitoring" }
+            { number: "10000", post: "+", label: "Business Owners" },
+            { pre:"₹", number: "50", post: "Cr +", label: "Revenue Tracked" },
+            { number: "99.9", post: "%", label: "Uptime" },
+            { number: "24", post: "Hours", label: "AI Monitoring" },
           ].map((stat, index) => (
             <div key={index} className="animate-fade-in">
-              <div className="text-3xl md:text-4xl font-bold text-primary mb-2">{stat.number}</div>
-              <div className="text-muted-foreground font-medium">{stat.label}</div>
+              <div className="flex items-center justify-center gap-2 text-4xl font-orbitron font-bold text-foreground">
+                <span className="font-bold text-foreground">{stat.pre}</span>
+                <CountUp
+                from={0}
+                to={Number(stat.number)}
+                separator=","
+                direction="up"
+                duration={1}
+                className="count-up-text"
+              />
+              <span className="font-bold text-foreground">{stat.post}</span>
+              </div>
+              <div className="text-muted-foreground font-medium">
+                {stat.label}
+              </div>
             </div>
           ))}
         </div>

@@ -1,15 +1,26 @@
 import { Button } from "@/components/ui/button";
 import { Card, CardContent } from "@/components/ui/card";
 import { MessageCircle, Phone, MapPin, Mail, Clock, ArrowRight } from "lucide-react";
+import SplitText from './SplitText'
 
 const Contact = () => {
   return (
     <section className="py-20 bg-background">
       <div className="container mx-auto px-4">
         <div className="text-center mb-16">
-          <h2 className="text-3xl font-orbitron md:text-5xl font-bold text-foreground mb-6 animate-fade-in">
-            Ready to Transform Your Business?
-          </h2>
+          <SplitText
+            text="Ready To Transform Your Business"
+            className="text-2xl text-center font-orbitron md:text-5xl"
+            delay={100}
+            duration={0.2}
+            ease="power3.out"
+            splitType="chars"
+            from={{ opacity: 0, y: 40 }}
+            to={{ opacity: 1, y: 0 }}
+            threshold={0.1}
+            rootMargin="-100px"
+            textAlign="center"
+          />
           <p className="text-xl text-muted-foreground max-w-3xl mx-auto animate-fade-in">
             Get started today and see how Ai Tally can revolutionize your business intelligence.
             Our team is here to help you every step of the way.
@@ -49,12 +60,12 @@ const Contact = () => {
                 </div>
                 
                 <div className="space-y-4">
-                  <Button variant="hero" size="lg" className="w-full">
+                  <Button variant="hero" size="lg" className="w-full cursor-target">
                     <MessageCircle className="w-5 h-5" />
                     Get WhatsApp Demo Now
                   </Button>
                   
-                  <Button variant="outline" size="lg" className="w-full">
+                  <Button variant="outline" size="lg" className="w-full cursor-target">
                     <Phone className="w-5 h-5" />
                     Schedule a Call
                   </Button>

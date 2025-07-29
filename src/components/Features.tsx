@@ -10,6 +10,7 @@ import {
   Shield,
   Clock
 } from "lucide-react";
+import SplitText from './SplitText';
 
 const Features = () => {
   const features = [
@@ -73,9 +74,19 @@ const Features = () => {
     <section className="py-20 bg-secondary/30">
       <div className="container mx-auto px-4">
         <div className="text-center mb-16">
-          <h2 className="text-3xl md:text-5xl font-orbitron font-bold text-foreground mb-6 animate-fade-in">
-            Everything Your Business Brain Needs
-          </h2>
+          <SplitText
+            text="Everything Your Business Brain Needs"
+            className="text-2xl text-center font-orbitron md:text-5xl"
+            delay={100}
+            duration={0.2}
+            ease="power3.out"
+            splitType="chars"
+            from={{ opacity: 0, y: 40 }}
+            to={{ opacity: 1, y: 0 }}
+            threshold={0.1}
+            rootMargin="-100px"
+            textAlign="center"
+          />
           <p className="text-xl text-muted-foreground max-w-3xl mx-auto animate-fade-in">
             From intelligent monitoring to actionable insights, Ai Tally transforms your Tally data 
             into a competitive advantage.
