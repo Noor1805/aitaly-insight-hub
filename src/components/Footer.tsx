@@ -9,10 +9,9 @@ const Footer = () => {
           {/* Brand */}
           <div className="lg:col-span-2">
             <div className="flex items-center gap-3 mb-6">
-              <div className="w-10 h-10 bg-white/10 rounded-full flex items-center justify-center">
-                <Brain className="w-6 h-6" />
+              <div className="flex items-center justify-center">
+                <img className="w-60" src="/assets/logo.svg" alt="" />
               </div>
-              <span className="text-2xl font-orbitron font-bold">Ai Tally</span>
             </div>
             
             <p className="text-primary-foreground/80 mb-6 max-w-md leading-relaxed">
