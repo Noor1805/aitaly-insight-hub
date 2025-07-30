@@ -30,9 +30,13 @@ const MediaShowcase = () => {
         tl.fromTo(
           item,
           { y: "20%", opacity: 0, scale: 0.95, rotate: -2 },
-          { 
-            y: "0%", opacity: 1, scale: 1, rotate: 0, 
-            duration: 1, ease: "power2.out" 
+          {
+            y: "0%",
+            opacity: 1,
+            scale: 1,
+            rotate: 0,
+            duration: 1,
+            ease: "power2.out",
           },
           i * 0.8
         );
@@ -44,42 +48,52 @@ const MediaShowcase = () => {
 
   return (
     <section className="bg-[hsl(var(--background))]">
-      {/* Hero video */}
-      <div className="relative overflow-hidden rounded-2xl shadow-[var(--shadow-brand)] w-[98%] mx-auto mb-12 md:mb-20">
-        <video
-          src="/assets/video.mp4"
-          autoPlay
-          muted
-          loop
-          playsInline
-          className="w-full h-[50vh] md:h-[70vh] xl:h-[85vh] object-cover"
-        />
-        <div className="absolute inset-0 bg-gradient-to-t from-[hsla(48,95%,44%,0.15)] to-transparent" />
+      <div className="w-full max-w-6xl mx-auto p-4 border-2 border-yellow-600 rounded-2xl overflow-hidden shadow-[var(--shadow-brand)] mb-12 md:mb-20">
+        <div className="relative w-full h-[50vh] md:h-[70vh] xl:h-[85vh] rounded-2xl overflow-hidden">
+          <video
+            src="/assets/video.mp4"
+            autoPlay
+            muted
+            loop
+            playsInline
+            className="w-full h-full object-cover"
+          />
+          {/* Gradient overlay */}
+          <div className="absolute inset-0 bg-gradient-to-t from-[hsla(48,95%,44%,0.15)] to-transparent" />
+        </div>
       </div>
 
-      {/* Stacked photos reveal */}
-      <div ref={stackRef} className="relative h-[500vh] mb-6">
-      {photos.map((n, i) => (
-        <div
-          key={n}
-          className="sticky top-0 w-[97%] mx-auto h-[100vh]"
-          style={{
-            zIndex: i,
-            pointerEvents: "none", // avoid scroll blocking
-          }}
-        >
-          <div className="w-[97%] mx-auto h-[100vh] overflow-hidden relative rounded-xl">
-            <img
-              src={`/assets/image${n}.jpg`}
-              alt={`Photo ${n}`}
-              className="w-[97%] mx-auto h-[100vh] object-cover rounded-xl"
-            />
-            {/* Optional gradient overlay */}
-            <div className="absolute inset-0 bg-gradient-to-b from-transparent to-black/30" />
-          </div>
-        </div>
-      ))}
+      <div className="w-full max-w-4xl border-2 border-yellow-600 mx-auto p-4 mb-5">
+  <div className="grid grid-cols-1 sm:grid-cols-2 sm:grid-rows-[1fr_1fr] gap-2 sm:h-[500px]">
+    {/* Top full-width image */}
+    <div className="col-span-1 sm:col-span-2 object-contain overflow-hidden rounded-md">
+      <img
+        src="/assets/image3.jpg"
+        alt="Top Image"
+        className="w-full h-48 sm:h-full  rounded-md"
+      />
     </div>
+
+    {/* Bottom left image */}
+    <div className="overflow-hidden object-contain rounded-md">
+      <img
+        src="/assets/image1.jpg"
+        alt="Bottom Left"
+        className="w-full h-48 sm:h-full  rounded-md"
+      />
+    </div>
+
+    {/* Bottom right image */}
+    <div className="overflow-hidden object-contain rounded-md">
+      <img
+        src="/assets/image2.jpg"
+        alt="Bottom Right"
+        className="w-full h-48 sm:h-full  rounded-md"
+      />
+    </div>
+  </div>
+</div>
+
     </section>
   );
 };
