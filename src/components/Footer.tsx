@@ -1,5 +1,5 @@
 import { Button } from "@/components/ui/button";
-import { Brain, MessageCircle, Mail, Phone, MapPin } from "lucide-react";
+import { MessageCircle, Mail, Phone, MapPin } from "lucide-react";
 
 const Footer = () => {
   return (
