@@ -111,17 +111,11 @@ const RollingGallery: React.FC<RollingGalleryProps> = ({
       {/* Side gradient overlays */}
       <div
         className="absolute top-0 left-0 h-full w-[36px] z-10"
-        style={{
-          background:
-            "linear-gradient(to left, rgba(0,0,0,0) 0%, #060010 100%)",
-        }}
+        
       />
       <div
         className="absolute top-0 right-0 h-full w-[36px] z-10"
-        style={{
-          background:
-            "linear-gradient(to right, rgba(0,0,0,0) 0%, #060010 100%)",
-        }}
+        
       />
 
       <div className="flex h-full items-center justify-center [perspective:700px] [transform-style:preserve-3d]">
