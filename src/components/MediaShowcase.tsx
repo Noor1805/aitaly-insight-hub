@@ -2,6 +2,7 @@
 import { useEffect, useRef } from "react";
 import gsap from "gsap";
 import { ScrollTrigger } from "gsap/ScrollTrigger";
+import RollingGallery from "./RollingGallery"; 
 
 gsap.registerPlugin(ScrollTrigger);
 
@@ -56,43 +57,21 @@ const MediaShowcase = () => {
             playsInline
             className="w-full h-full object-cover"
           />
-          {/* Gradient overlay */}
+          
           <div className="absolute inset-0 bg-gradient-to-t from-[hsla(48,95%,44%,0.15)] to-transparent" />
         </div>
       </div>
 
-      <div className="w-full max-w-4xl border-2 border-yellow-600 mx-auto p-4 mb-5">
-        <div className="grid grid-cols-1 sm:grid-cols-2 sm:grid-rows-[1fr_1fr] gap-2 sm:h-[500px]">
-          {/* Top full-width image */}
-          <div className="col-span-1 sm:col-span-2 object-contain overflow-hidden rounded-md">
-            <img
-              src="/assets/image3.jpg"
-              alt="Top Image"
-              className="w-full h-48 sm:h-full  rounded-md"
-            />
-          </div>
-
-          {/* Bottom left image */}
-          <div className="overflow-hidden object-contain rounded-md">
-            <img
-              src="/assets/image1.jpg"
-              alt="Bottom Left"
-              className="w-full h-48 sm:h-full  rounded-md"
-            />
-          </div>
-
-          {/* Bottom right image */}
-          <div className="overflow-hidden object-contain rounded-md">
-            <img
-              src="/assets/image2.jpg"
-              alt="Bottom Right"
-              className="w-full h-48 sm:h-full  rounded-md"
-            />
-          </div>
+      <div className="w-full px-4 mb-4">
+        <div className="w-full max-w-7xl mx-auto rounded-md overflow-hidden">
+          <RollingGallery autoplay pauseOnHover />
         </div>
       </div>
+
+      
     </section>
   );
 };
 
 export default MediaShowcase;
+
