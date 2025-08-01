@@ -48,14 +48,14 @@ const MediaShowcase = () => {
   return (
     <section className="bg-[hsl(var(--background))]">
       <div className="w-full max-w-6xl mx-auto p-4 border-2 border-yellow-600 rounded-2xl overflow-hidden shadow-[var(--shadow-brand)] mb-12 md:mb-20">
-        <div className="relative w-full h-[50vh] md:h-[70vh] xl:h-[85vh] rounded-2xl overflow-hidden">
+        <div className="relative w-full h-auto md:h-[70vh] xl:h-[85vh] rounded-2xl overflow-hidden">
           <video
             src="/assets/video.mp4"
             autoPlay
             muted
             loop
             playsInline
-            className="w-full h-full object-cover"
+            className="w-full h-auto object-cover object-center"
           />
           
           <div className="absolute inset-0 bg-gradient-to-t from-[hsla(48,95%,44%,0.15)] to-transparent" />
