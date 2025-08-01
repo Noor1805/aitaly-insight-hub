@@ -5,8 +5,6 @@ import { ScrollTrigger } from "gsap/ScrollTrigger";
 
 gsap.registerPlugin(ScrollTrigger);
 
-const photos = [1, 2, 3, 4];
-
 const MediaShowcase = () => {
   const stackRef = useRef<HTMLDivElement>(null);
 
@@ -64,36 +62,35 @@ const MediaShowcase = () => {
       </div>
 
       <div className="w-full max-w-4xl border-2 border-yellow-600 mx-auto p-4 mb-5">
-  <div className="grid grid-cols-1 sm:grid-cols-2 sm:grid-rows-[1fr_1fr] gap-2 sm:h-[500px]">
-    {/* Top full-width image */}
-    <div className="col-span-1 sm:col-span-2 object-contain overflow-hidden rounded-md">
-      <img
-        src="/assets/image3.jpg"
-        alt="Top Image"
-        className="w-full h-48 sm:h-full  rounded-md"
-      />
-    </div>
+        <div className="grid grid-cols-1 sm:grid-cols-2 sm:grid-rows-[1fr_1fr] gap-2 sm:h-[500px]">
+          {/* Top full-width image */}
+          <div className="col-span-1 sm:col-span-2 object-contain overflow-hidden rounded-md">
+            <img
+              src="/assets/image3.jpg"
+              alt="Top Image"
+              className="w-full h-48 sm:h-full  rounded-md"
+            />
+          </div>
 
-    {/* Bottom left image */}
-    <div className="overflow-hidden object-contain rounded-md">
-      <img
-        src="/assets/image1.jpg"
-        alt="Bottom Left"
-        className="w-full h-48 sm:h-full  rounded-md"
-      />
-    </div>
+          {/* Bottom left image */}
+          <div className="overflow-hidden object-contain rounded-md">
+            <img
+              src="/assets/image1.jpg"
+              alt="Bottom Left"
+              className="w-full h-48 sm:h-full  rounded-md"
+            />
+          </div>
 
-    {/* Bottom right image */}
-    <div className="overflow-hidden object-contain rounded-md">
-      <img
-        src="/assets/image2.jpg"
-        alt="Bottom Right"
-        className="w-full h-48 sm:h-full  rounded-md"
-      />
-    </div>
-  </div>
-</div>
-
+          {/* Bottom right image */}
+          <div className="overflow-hidden object-contain rounded-md">
+            <img
+              src="/assets/image2.jpg"
+              alt="Bottom Right"
+              className="w-full h-48 sm:h-full  rounded-md"
+            />
+          </div>
+        </div>
+      </div>
     </section>
   );
 };
