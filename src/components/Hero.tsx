@@ -31,7 +31,7 @@ const Hero = () => {
       </div>
 
       {/* Main Headline */}
-      <h1 className="text-4xl font-orbitron md:text-6xl lg:text-7xl font-bold text-foreground mb-6 animate-fade-in leading-tight">
+      <h1 className="text-4xl font-poppins md:text-6xl lg:text-7xl font-bold text-foreground mb-6 animate-fade-in leading-tight">
         Your <span className="gradient-primary bg-clip-text text-transparent">24/7 Business Brain</span>, 
         <br />Powered by AI
       </h1>

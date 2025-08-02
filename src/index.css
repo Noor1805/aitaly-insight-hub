@@ -1,13 +1,13 @@
+@import url('https://fonts.googleapis.com/css2?family=Poppins&display=swap');
+
 @tailwind base;
 @tailwind components;
 @tailwind utilities;
 
-@font-face {
-  font-family: 'OrbitronBold';
-  src: url('./assets/OrbitronBold.ttf') format('truetype');
-  font-weight: bold;
-  font-style: normal;
+* {
+  font-family: 'Poppins', sans-serif;
 }
+
 
 *::selection {
   background-color: hsl(48, 95%, 44%);
@@ -50,7 +50,7 @@
 
     --radius: 0.75rem;
 
-    --gradient-primary: linear-gradient(135deg, hsl(48, 97%, 45%), hsl(48, 98%, 54%));
+    --gradient-primary: linear-gradient(135deg, hsl(48, 91%, 56%), hsl(48, 96%, 63%));
     --gradient-hero: linear-gradient(180deg, hsl(0 0% 100%), hsl(48 25% 98%));
     --gradient-card: linear-gradient(145deg, hsl(0 0% 100%), hsl(48 15% 98%));
 
@@ -105,7 +105,7 @@
     --input: 48 10% 15%;
     --ring: 48 100% 75%;
 
-    --gradient-primary: linear-gradient(135deg, hsl(48, 100%, 62%), hsl(48, 92%, 61%));
+    --gradient-primary: linear-gradient(135deg, hsl(48, 93%, 68%), hsl(48, 91%, 71%));
     --gradient-hero: linear-gradient(180deg, hsl(0 0% 0%), hsl(48 10% 5%));
     --gradient-card: linear-gradient(145deg, hsl(48 10% 10%), hsl(48 15% 12%));
 
@@ -131,7 +131,7 @@
   }
 
   body {
-    @apply bg-background text-foreground font-inter;
+    @apply bg-background text-foreground ;
   }
 
   .gradient-primary {
