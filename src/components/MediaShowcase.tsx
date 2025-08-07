@@ -2,6 +2,7 @@
 import { useEffect, useRef } from "react";
 import gsap from "gsap";
 import { ScrollTrigger } from "gsap/ScrollTrigger";
+import RollingGallery from "./RollingGallery";
 
 gsap.registerPlugin(ScrollTrigger);
 
@@ -60,32 +61,10 @@ const MediaShowcase = () => {
           <div className="absolute inset-0 bg-gradient-to-t from-[hsla(48,95%,44%,0.15)] to-transparent" />
         </div>
       </div>
-      
-      <div className="relative bg-[var(--background)]">
-        <div className="max-w-7xl mx-auto px-6">
-          <div className="grid grid-cols-1 md:grid-cols-3 gap-6">
-            <div className="relative group">
-              <img
-                src="/assets/image1.jpg"
-                alt="Feature 1"
-                className="rounded-2xl shadow-lg transition-transform group-hover:-translate-y-1"
-              />
-            </div>
-            <div className="relative group mt-8 md:mt-0">
-              <img
-                src="/assets/image2.jpg"
-                alt="Feature 2"
-                className="rounded-2xl shadow-lg transition-transform group-hover:-translate-y-1"
-              />
-            </div>
-            <div className="relative group mt-16 md:mt-0">
-              <img
-                src="/assets/image3.jpg"
-                alt="Feature 3"
-                className="rounded-2xl shadow-lg transition-transform group-hover:-translate-y-1"
-              />
-            </div>
-          </div>
+
+      <div className="w-full px-4 mb-4">
+        <div className="w-full max-w-7xl mx-auto rounded-md overflow-hidden">
+          <RollingGallery autoplay pauseOnHover />
         </div>
       </div>
     </section>
