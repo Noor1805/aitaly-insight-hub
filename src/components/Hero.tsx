@@ -1,22 +1,10 @@
 import { Button } from "@/components/ui/button";
-import Squares from "./Squares";
 
 import { Brain, MessageCircle, BarChart3, Smartphone } from "lucide-react";
 
 const Hero = () => {
   return (
-    <section className="relative min-h-screen flex items-center justify-center overflow-hidden">
-      {/* RippleGrid Background */}
-      <div className="absolute inset-0 z-0">
-        <Squares
-          speed={0.5}
-          squareSize={40}
-          direction="diagonal" // up, down, left, right, diagonal
-          borderColor="#f6ce2d"
-          hoverFillColor="#222"
-        />
-      </div>
-
+    <section className="relative min-h-screen flex items-center justify-center overflow-hidden bg-[var(--gradient-hero)]">
       {/* Hero Content */}
       <div className="container mx-auto px-4 py-20 relative z-10">
         <div className="max-w-4xl mx-auto text-center">
