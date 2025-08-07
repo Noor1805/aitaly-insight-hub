@@ -140,7 +140,7 @@ const SplitText: React.FC<SplitTextProps> = ({
   return (
     <p
       ref={ref}
-      className={`split-parent overflow-hidden inline-block whitespace-normal ${className}`}
+      className={`split-parent overflow-hidden inline-block whitespace-normal h-[7.5vh] ${className}`}
       style={{
         textAlign,
         wordWrap: "break-word",
