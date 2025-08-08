@@ -110,7 +110,7 @@ const SplitText: React.FC<SplitTextProps> = ({
       ...to,
       duration,
       ease,
-      stagger: delay / 1000,
+      stagger: delay / 2000,
       force3D: true,
     });
 

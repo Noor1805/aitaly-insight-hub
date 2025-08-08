@@ -111,8 +111,7 @@ const Features = () => {
 
         <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8 animate-stagger">
           {features.map((feature, index) => (
-            <SpotlightCard key={index} className="rounded-xl">
-              <Card className="border-border hover-lift transition-spring gradient-card">
+            <SpotlightCard key={index} className="custom-spotlight-card border-border hover-lift transition-spring gradient-card" spotlightColor="rgba(0, 229, 255, 0.2)">
                 <CardHeader>
                   <div className="flex items-center gap-4 mb-4">
                     <div className="p-3 rounded-lg bg-primary/10">
@@ -128,7 +127,6 @@ const Features = () => {
                     {feature.description}
                   </CardDescription>
                 </CardContent>
-              </Card>
             </SpotlightCard>
           ))}
         </div>
