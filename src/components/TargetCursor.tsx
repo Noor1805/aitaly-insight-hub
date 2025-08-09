@@ -72,16 +72,7 @@ const TargetCursor: React.FC<TargetCursorProps> = ({
       y: window.innerHeight / 2,
     });
 
-    const createSpinTimeline = () => {
-      if (spinTl.current) {
-        spinTl.current.kill();
-      }
-      spinTl.current = gsap
-        .timeline({ repeat: -1 })
-        .to(cursor, { rotation: "+=360", duration: spinDuration, ease: "none" });
-    };
 
-    createSpinTimeline();
 
     const moveHandler = (e: MouseEvent) => moveCursor(e.clientX, e.clientY);
     window.addEventListener("mousemove", moveHandler);
@@ -315,29 +306,10 @@ const TargetCursor: React.FC<TargetCursorProps> = ({
   return (
     <div 
       ref={cursorRef} 
-      className="fixed top-0 left-0 w-0 h-0 pointer-events-none z-[9999] mix-blend-difference transform -translate-x-1/2 -translate-y-1/2"
+      className="fixed top-0 left-0 w-0 h-0 text-4xl pointer-events-none z-[99999999]  transform -translate-x-1/2 -translate-y-1/2"
       style={{ willChange: 'transform' }}
     >
-      <div 
-        className="absolute left-1/2 top-1/2 w-1 h-1 bg-sidebar-pborder-sidebar-primary rounded-full transform -translate-x-1/2 -translate-y-1/2" 
-        style={{ willChange: 'transform' }}
-      />
-      <div 
-        className="target-cursor-corner absolute left-1/2 top-1/2 w-3 h-3 border-[3px] border-sidebar-primary transform -translate-x-[150%] -translate-y-[150%] border-r-0 border-b-0" 
-        style={{ willChange: 'transform' }}
-      />
-      <div 
-        className="target-cursor-corner absolute left-1/2 top-1/2 w-3 h-3 border-[3px] border-sidebar-primary transform translate-x-1/2 -translate-y-[150%] border-l-0 border-b-0" 
-        style={{ willChange: 'transform' }}
-      />
-      <div 
-        className="target-cursor-corner absolute left-1/2 top-1/2 w-3 h-3 border-[3px] border-sidebar-primary transform translate-x-1/2 translate-y-1/2 border-l-0 border-t-0" 
-        style={{ willChange: 'transform' }}
-      />
-      <div 
-        className="target-cursor-corner absolute left-1/2 top-1/2 w-3 h-3 border-[3px] border-sidebar-primary transform -translate-x-[150%] translate-y-1/2 border-r-0 border-t-0" 
-        style={{ willChange: 'transform' }}
-      />
+      🐵
     </div>
   );
 };
