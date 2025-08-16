@@ -18,20 +18,18 @@ const Hero = () => {
 
           {/* Main Headline */}
           <h1 className="text-4xl font-poppins md:text-6xl lg:text-7xl font-bold text-foreground mb-6 animate-fade-in leading-tight">
-            Your{" "}
+            AI Tally & {" "}
             <span className="gradient-primary bg-clip-text text-transparent">
-              24/7 Business Brain
+              Dynamic Pricing
             </span>
             ,
             <br />
-            Powered by AI
+             — Intelligence Meets Profit
           </h1>
 
           {/* Subheadline */}
           <p className="text-xl md:text-2xl text-muted-foreground mb-4 max-w-3xl mx-auto animate-fade-in">
-            Ai Tally connects to your Tally software and delivers smart business
-            insights, alerts, and suggestions in plain English — straight to
-            your phone.
+            Connect your Tally software with AI-powered insights and real-time dynamic pricing to boost efficiency and profitability.
           </p>
 
           {/* Value proposition */}
