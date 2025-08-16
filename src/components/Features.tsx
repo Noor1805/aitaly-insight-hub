@@ -23,9 +23,9 @@ const Features = () => {
   const features = [
     {
       icon: Brain,
-      title: "AI Business Brain",
+      title: "AI Business Brain → AI Pricing Brain",
       description:
-        "Remembers, thinks, suggests, reports, and warns — your intelligent business assistant that never sleeps.",
+        "Focus the description on analyzing market trends, competitor prices, and cost fluctuations to recommend optimal selling prices.",
       color: "text-primary",
     },
     {
@@ -37,16 +37,16 @@ const Features = () => {
     },
     {
       icon: TrendingUp,
-      title: "Profit Booster Suggestions",
+      title: "Profit Booster Suggestions → Dynamic Price Optimization",
       description:
-        "AI analyzes your data to suggest actionable strategies for increasing revenue and reducing costs.",
+        " Explain that AI adjusts prices automatically based on demand, competitor changes, and stock levels.",
       color: "text-success",
     },
     {
       icon: PieChart,
-      title: "Visual Analytics",
+      title: "Visual Analytics → Price Performance Analytics",
       description:
-        "Beautiful charts for sales, profit, expenses, and trends that make sense of your business performance.",
+        "Show charts for margin trends, price competitiveness, and product profitability.",
       color: "text-accent",
     },
     {
@@ -65,9 +65,9 @@ const Features = () => {
     },
     {
       icon: FileText,
-      title: "Daily/Weekly Reports",
+      title: "Daily/Weekly Reports → Price Change Reports",
       description:
-        "Automated business summaries delivered to your WhatsApp or email in simple, understandable language.",
+        " Summaries of price changes, their impact on sales, and competitor price movements.",
       color: "text-primary",
     },
     {
@@ -91,8 +91,8 @@ const Features = () => {
       <div className="container mx-auto px-4">
         <div className="text-center mb-16">
           <SplitText
-            text="Everything Your Business Brain Needs"
-            className="text-2xl text-center font-orbitron md:text-5xl"
+            text="Everything Your Business Brain Needs – AI Tally & Autoprice Pro"
+            className="text-2xl text-center font-orbitron md:text-4xl"
             delay={100}
             duration={0.2}
             ease="power3.out"
@@ -103,30 +103,37 @@ const Features = () => {
             rootMargin="-100px"
             textAlign="center"
           />
-          <p className="text-xl text-muted-foreground max-w-3xl mx-auto animate-fade-in">
-            From intelligent monitoring to actionable insights, Ai Tally
-            transforms your Tally data into a competitive advantage.
+          <p className="text-xl text-muted-foreground max-w-5xl mx-auto animate-fade-in">
+            From intelligent monitoring to actionable insights, AI Tally
+            transforms your Tally data into a competitive advantage, while
+            Autoprice Pro’s Price Management System ensures dynamic, accurate,
+            and profitable pricing—empowering your business to make smarter,
+            faster decisions.
           </p>
         </div>
 
         <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8 animate-stagger">
           {features.map((feature, index) => (
-            <SpotlightCard key={index} className="custom-spotlight-card border-border hover-lift transition-spring gradient-card" spotlightColor="rgba(0, 229, 255, 0.2)">
-                <CardHeader>
-                  <div className="flex items-center gap-4 mb-4">
-                    <div className="p-3 rounded-lg bg-primary/10">
-                      <feature.icon className={`w-6 h-6 ${feature.color}`} />
-                    </div>
+            <SpotlightCard
+              key={index}
+              className="custom-spotlight-card border-border hover-lift transition-spring gradient-card"
+              spotlightColor="rgba(0, 229, 255, 0.2)"
+            >
+              <CardHeader>
+                <div className="flex items-center gap-4 mb-4">
+                  <div className="p-3 rounded-lg bg-primary/10">
+                    <feature.icon className={`w-6 h-6 ${feature.color}`} />
                   </div>
-                  <CardTitle className="text-xl font-orbitron font-semibold">
-                    {feature.title}
-                  </CardTitle>
-                </CardHeader>
-                <CardContent>
-                  <CardDescription className="text-muted-foreground leading-relaxed">
-                    {feature.description}
-                  </CardDescription>
-                </CardContent>
+                </div>
+                <CardTitle className="text-xl font-orbitron font-semibold">
+                  {feature.title}
+                </CardTitle>
+              </CardHeader>
+              <CardContent>
+                <CardDescription className="text-muted-foreground leading-relaxed">
+                  {feature.description}
+                </CardDescription>
+              </CardContent>
             </SpotlightCard>
           ))}
         </div>
