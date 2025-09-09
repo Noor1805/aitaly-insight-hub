@@ -1,74 +1,113 @@
 "use client";
-import { useEffect, useRef } from "react";
-import gsap from "gsap";
-import { ScrollTrigger } from "gsap/ScrollTrigger";
-import RollingGallery from "./RollingGallery";
+import React from "react";
+import SplitText from "./SplitText";
 
-gsap.registerPlugin(ScrollTrigger);
+interface Product {
+  id: number;
+  name: string;
+  price: string;
+  image: string;
+}
 
-const MediaShowcase = () => {
-  const stackRef = useRef<HTMLDivElement>(null);
+const products: Product[] = [
+  {
+    id: 1,
+    name: "Aum Lariat Earrings",
+    price: "₹ 60520",
+    image: "/images/jewelry1.png",
+  },
+  {
+    id: 2,
+    name: "The Labyrinth Hoops",
+    price: "₹ 79621",
+    image: "/images/jewelry2.png",
+  },
+  {
+    id: 3,
+    name: "Golden Rays Pendant",
+    price: "₹ 225698",
+    image: "/images/jewelry3.png",
+  },
+  {
+    id: 4,
+    name: "Prestige Of Solace Pendant",
+    price: "₹ 258965",
+    image: "/images/jewelry4.png",
+  },
+  {
+    id: 5,
+    name: "The Purple Prisma",
+    price: "₹ 93532",
+    image: "/images/jewelry5.png",
+  },
+  {
+    id: 6,
+    name: "My Embrace Earrings 1 Diamond",
+    price: "₹ 97271",
+    image: "/images/jewelry6.png",
+  },
+  {
+    id: 7,
+    name: "Eternal Elegance Ring",
+    price: "₹ 160802",
+    image: "/images/jewelry7.png",
+  },
+  {
+    id: 8,
+    name: "Ensembled in Change Earrings",
+    price: "₹ 208967",
+    image: "/images/jewelry8.png",
+  },
+];
 
-  useEffect(() => {
-    if (!stackRef.current) return;
-
-    const ctx = gsap.context(() => {
-      const items = gsap.utils.toArray<HTMLDivElement>(".stack-photo");
-
-      const tl = gsap.timeline({
-        scrollTrigger: {
-          trigger: stackRef.current,
-          start: "top top",
-          end: `+=${items.length * 120}%`,
-          scrub: true,
-          pin: true,
-        },
-      });
-
-      items.forEach((item, i) => {
-        tl.fromTo(
-          item,
-          { y: "20%", opacity: 0, scale: 0.95, rotate: -2 },
-          {
-            y: "0%",
-            opacity: 1,
-            scale: 1,
-            rotate: 0,
-            duration: 1,
-            ease: "power2.out",
-          },
-          i * 0.8
-        );
-      });
-    }, stackRef);
-
-    return () => ctx.revert();
-  }, []);
-
+const ProductGrid: React.FC = () => {
   return (
-    <section className="bg-[hsl(var(--background))]">
-      <div className="w-full max-w-6xl mx-auto p-4 border-2rounded-2xl overflow-hidden shadow-[var(--shadow-brand)] mb-12 md:mb-20">
-        <div className="relative w-full h-auto md:h-[70vh] xl:h-[85vh] rounded-2xl overflow-hidden">
-          <video
-            src="/assets/video.mp4"
-            autoPlay
-            muted
-            loop
-            playsInline
-            className="w-full h-auto object-cover object-center"
+    <div className="max-w-6xl mx-auto px-4 py-10">
+      {/* Title */}
+      <SplitText
+            text="AI Tally – Smart Accounting Software Powered by Hanexis"
+            className="text-2xl text-center font-orbitron md:text-5xl"
+            delay={100}
+            duration={0.2}
+            ease="power3.out"
+            splitType="chars"
+            from={{ opacity: 0, y: 40 }}
+            to={{ opacity: 1, y: 0 }}
+            threshold={0.1}
+            rootMargin="-100px"
+            textAlign="center"
           />
 
-          <div className="absolute inset-0 bg-gradient-to-t from-[hsla(48,95%,44%,0.15)] to-transparent" />
-        </div>
-      </div>
+      <p className="text-gray-600 mt-2">
+        AI Tally by Hanexis empowers businesses with end-to-end accounting
+        automation — from auto GST &amp; TDS calculations and smart vouchers to
+        AI-driven data entry, ledger management, and section-wise compliance
+      </p>
+      <hr className="my-6 border-gray-300" />
 
-      <div className="w-full px-4 mb-4">
-        <div className="w-full max-w-7xl mx-auto rounded-md overflow-hidden">
-          <RollingGallery autoplay pauseOnHover />
+      {/* Monkey Emoji */}
+      <div className="relative">
+
+        {/* Product Grid */}
+        <div className="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-4 gap-6 bg-gradient-to-b from-white to-yellow-50 p-6 rounded-xl shadow-md">
+          {products.map((product) => (
+            <div
+              key={product.id}
+              className="flex flex-col items-center text-center"
+            >
+              <img
+                src={product.image}
+                alt={product.name}
+                className="w-full h-48 object-cover rounded-md shadow"
+              />
+              <h3 className="mt-3 text-sm font-medium">{product.name}</h3>
+              <p className="text-blue-600 font-semibold">{product.price}</p>
+            </div>
+          ))}
         </div>
       </div>
-    </section>
+    </div>
   );
 };
 
-export default MediaShowcase;
+export default ProductGrid;
